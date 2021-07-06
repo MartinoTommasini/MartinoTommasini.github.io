@@ -23,7 +23,7 @@ tagline: InfoSec student | CTF player | Aspiring Penetration Tester  # it will d
 
 description: >-                        # used by seo meta and the atom feed
      A personal website with my hacking writeups,
-     projects, blogs and more.
+     projects, articles and more.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://martinotommasini.github.io'
