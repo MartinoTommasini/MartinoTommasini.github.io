@@ -1,10 +1,17 @@
+---
+title: PortSwigger Labs - Reflected XSS into HTML context with all tags blocked except custom ones
+date: 2021-06-23 10:40:00 +0200
+categories: [PortSwigger-Labs]
+tags: [xss, reflected-xss, custom-tags]     # TAG names should always be lowercase
+dirImg: /assets/img/PortSwigger/Reflected-XSS-on-custom-tag
+---
 # Reflected XSS into HTML context with all tags blocked except custom ones
 
 ## Description
 
 Link: https://portswigger.net/web-security/cross-site-scripting/contexts/lab-html-context-with-all-standard-tags-blocked
 
->![](imgs/20210623-175539.png)
+>![]({{ page.dirImg }}/20210623-175539.png){: .shadow}
 
 ## Writeup
 

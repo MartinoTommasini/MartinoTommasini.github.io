@@ -1,25 +1,33 @@
-# Exploiting XSS to perform CSRF
+---
+title: PortSwigger Labs - Stored XSS to CSRF to change users email
+date: 2021-07-04 11:36:00 +0200
+categories: [PortSwigger-Labs]
+tags: [xss, stored-xss, csrf, csrf-token-bypass]     # TAG names should always be lowercase
+dirImg: /assets/img/PortSwigger/Stored-XSS-to-CSRF-to-change-users-email
+toc: false
+---
+
 
 ## Description
 
 Link : https://portswigger.net/web-security/cross-site-scripting/exploiting/lab-perform-csrf
 
->![](imgs/20210701-200938.png)
+![]({{ page.dirImg }}/20210701-200938.png){: .shadow}
 
 
 ## Writeup
 
 We log in as the **wiener** user and we are redirected to our account page (`/my-account`):
 
->![](imgs/20210701-201401.png)
+![]({{ page.dirImg }}/20210701-201401.png){: .shadow}
 
 The page exposes a `update email` functionality and it is protected by a CSRF token.
 
-We can use Burp to intercept the HTTP requests and to understand the `update email` mechanism in detail.
+We can use Burp to intercept the HTTP requests in order to understand the `update email` mechanism in detail.
 
 We change the email to **luca@normal-user.net** and here is the request:
 
->![](imgs/20210701-202035.png)
+![]({{ page.dirImg }}/20210701-202035.png){: .shadow}
 
 
 The email and the CSRF token are sent in the POST data after being urlencoded. Given that the request is protected by a CSRF token it is necessary to provide a valid token in order for the request to be valid.  
@@ -29,11 +37,11 @@ Let's look for the XSS then.
 
 The XSS can be easily spotted by testing the trivial `<script>` tag on the _comment_ text area
 
->![](imgs/20210701-203757.png)
+![]({{ page.dirImg }}/20210701-203757.png){: .shadow}
 
 And Javascript is executed.
 
->![](imgs/20210701-203902.png)
+![]({{ page.dirImg }}/20210701-203902.png){: .shadow}
 
 
 We can now use the XSS to bypass the CSRF protection and perform a CSRF attack in order to change the password of the users who will visit the page where the XSS is stored.  

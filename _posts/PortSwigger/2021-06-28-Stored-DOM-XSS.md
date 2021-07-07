@@ -3,7 +3,8 @@ title: PortSwigger Labs - Stored DOM XSS
 date: 2021-06-28 01:34:00 +0200
 categories: [PortSwigger-Labs]
 tags: [xss, stored-xss, javascript]     # TAG names should always be lowercase
-dirImg: /assets/img/PortSwigger/Stored DOM XSS/
+dirImg: /assets/img/PortSwigger/Stored-DOM-XSS
+toc: false
 ---
 
 

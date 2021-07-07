@@ -1,10 +1,16 @@
-# Reflected XSS with some SVG markup allowed
+---
+title: PortSwigger Labs - Reflected XSS with some SVG markup allowed
+date: 2021-06-27 11:57:00 +0200
+categories: [PortSwigger-Labs]
+tags: [xss, reflected-xss, svg]     # TAG names should always be lowercase
+dirImg: /assets/img/PortSwigger/Reflected-XSS-with-SVG
+---
 
 ## Description
 
 Link: https://portswigger.net/web-security/cross-site-scripting/contexts/lab-some-svg-markup-allowed
 
->![](imgs/20210627-231828.png)
+>![]({{ page.dirImg }}/20210627-231828.png){: .shadow}
 
 ## Writeup
 
@@ -17,13 +23,13 @@ What we can do is fuzzing the event attribute to figure out which event is allow
 We can do it using Burp intruder.  
 The request we crafted is 
 
->![](imgs/20210627-232934.png)
+>![]({{ page.dirImg }}/20210627-232934.png){: .shadow}
 
 Our dictonary is a wordlist file with all the `events`.
 
 Running Intruder we get to know that the `onbegin` event is whitelisted:
 
->![](imgs/20210627-233127.png)
+>![]({{ page.dirImg }}/20210627-233127.png){: .shadow}
 
 
 We can exploit it and craft our XSS payload. We try a couple of different payloads, then we find the right one using the `animatetransform` tag:
@@ -32,7 +38,7 @@ We can exploit it and craft our XSS payload. We try a couple of different payloa
 <svg><animatetransform onbegin=alert(document.domain) attributeName=transform>
 ```
 
->![](imgs/20210627-235535.png)
+>![]({{ page.dirImg }}/20210627-235535.png){: .shadow}
 
 
 
