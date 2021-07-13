@@ -1,4 +1,5 @@
---- title: Hack The Box - ScriptKiddie Writeup
+--- 
+title: Hack The Box - ScriptKiddie Writeup
 date: 2021-06-06 10:12:00 +0200
 categories: [Hack The Box, Machines]
 tags: [wfuzz, common-vulnerability, metasploit]     # TAG names should always be lowercase
