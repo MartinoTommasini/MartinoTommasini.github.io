@@ -9,6 +9,6 @@ I joined the infosec community in early 2020 and haven't stopped hacking (ethica
 
 I'm currently focusing on web application security, hunting for bugs in Bug Bounty platforms.  
 
-> This is my personal website where I keep the writeups for various challanges/machines/labs I solved. I'll soon start publishing blog posts covering some useful topics and bug bounty findings.
+> This is my personal website where I keep the writeups for various challanges, machines and/labs I solved. I'll soon start publishing blog posts covering some useful topics and bug bounty findings.
 
 
