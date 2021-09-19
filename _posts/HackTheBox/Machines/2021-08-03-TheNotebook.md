@@ -2,7 +2,7 @@
 title: Hack The Box - TheNotebook writeup                         
 date: 2021-08-03 11:40:00 +0200                                                              
 categories: [Hack The Box, Machines]                                                                
-tags: [jwt, docker, common-vulnerability ]     
+tags: [jwt, docker, known-exploit ]     
 dirImg: /assets/img/HackTheBox/TheNotebook                     
 image:
   src: /assets/img/HackTheBox/TheNotebook/icon.webp

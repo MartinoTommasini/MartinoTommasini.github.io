@@ -2,7 +2,7 @@
 title: Hack The Box - Armageddon writeup                          
 date: 2021-08-03 12:38:00 +0200                                                              
 categories: [ Hack The Box, Machines]                                                                
-tags: [outdated-software, common-vulnerability, metasploit, drupal, john-the-ripper  ]     
+tags: [outdated-software, known-exploit, metasploit, drupal, john-the-ripper  ]     
 dirImg: /assets/img/HackTheBox/Armageddon                     
 image:
   src: /assets/img/HackTheBox/Armageddon/icon.webp
